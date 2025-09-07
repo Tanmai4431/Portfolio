@@ -6,12 +6,10 @@
     <title>Portfolio</title>
 </head>
 <style>
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0a192f;
   color: #ccd6f6;
-  /* line-height: 1.6; */
 }
 .sidebar {
   width: 450px;
@@ -28,7 +26,6 @@ body {
   font-size: 3.5rem;
   margin-left: 20px;
   margin-bottom: 3px;
-
 }
 .sidebar-header h2 {
   font-size: 1.5rem;
@@ -55,11 +52,10 @@ body {
     margin: 10px 0;
     text-align: justify;
     margin-left: 80px;
-
 }
 .sidebar-nav li a {
   position: relative;
-  padding-left: 35px; 
+  padding-left: 35px;
   color: #8892b0;
   text-decoration: none;
   font-size: 1rem;
@@ -80,12 +76,9 @@ body {
   color: white;
   font-weight: bold;
 }
-
-.sidebar-nav li a:hover::before
-{
+.sidebar-nav li a:hover::before {
   background-color: white;
 }
-/* ------------------------ */
 .main-sidebar {
   position: fixed;
   top: 0;
@@ -93,20 +86,19 @@ body {
   right: 0;
   bottom: 0;
   padding: 40px 60px;
-  overflow-y: auto;  
+  overflow-y: auto;
   background-color: #0a192f;
 }
 .p1, .p2, .p3, .p4 {
   text-align: justify;
   font-size: 1.1rem;
 }
-
 .project-image {
   width: 70%;
   height: auto;
   border-radius: 10px;
 }
-.project{
+.project {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 30px;
@@ -127,14 +119,14 @@ text-align: left;
   font-weight: bold;
   transition: color 0.3s ease;
 }
- .linkedin a:hover {
+.linkedin a:hover {
   color:white
 }
 .project h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-.project:hover{
+.project:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
   color:#6d94ce ;
@@ -145,28 +137,56 @@ text-align: left;
 .p4 {
   margin-bottom: 50px;
 }
-/* ---------------------------
-@media screen and (min-width: 460px) {
 
-}
-
-@media screen and (min-width: 468px) and (max-width: 768px)  {
-  .media{
-    color:#e3080f
+/* Updated media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    text-align: center;
   }
-  
-}
-@media screen and (min-width: 768px) {
-  .media{
-    color:#0eda3e
+  .sidebar-header h1, .sidebar-header h2, .sidebar-header p {
+    text-align: center;
+    margin-left: 0;
   }
-  
+  .sidebar-nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 0;
+  }
+  .sidebar-nav ul li {
+    margin-left: 0;
+  }
+  .sidebar-nav li a {
+    padding-left: 0;
+    font-size: 0.9rem;
+  }
+  .sidebar-nav li a::before {
+    display: none;
+  }
+  .main-sidebar {
+    position: static;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+  }
+  .project {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 15px;
+  }
+  .project-image {
+    width: 100%;
+  }
+  .p1, .p2, .p3, .p4, .email, .linkedin {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
 }
- */
-
-
-
-
 </style>
 <body class="body">
     <aside class="sidebar">
@@ -176,71 +196,60 @@ text-align: left;
             <p>I build accessible, pixel-perfect digital experiences for the web.</p>
             <nav class="sidebar-nav">
                <ul>
-  <li><a href="#about">About</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
-
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#contact">Contact</a></li>
+               </ul>
             </nav>
         </header>
-        </aside>
-        <aside class="main-sidebar">
-    <main class="main">
-      
-        <section id="about" class="about">
-            <h2>ABOUT</h2>
-            <p class="p1">I'm a passionate front-end developer enthusiastic about building real-world web pages that are both visually engaging and user-friendly. I love working at the intersection of design and development — translating thoughtful UI designs into clean, responsive, and accessible code that performs well across devices.</p>
-             <p class="p2">As a fresher, I’ve been actively learning modern web technologies like HTML, CSS, JavaScript, and frameworks like React. I enjoy turning ideas into interactive experiences, and I'm constantly experimenting with personal projects to sharpen my skills and stay up-to-date with best practices in web development.</p>
-             <p class="p3">I’m particularly interested in creating inclusive digital experiences that are accessible to everyone, and I'm eager to grow as a developer by contributing to meaningful projects in a collaborative environment.</p>
-             <p class="p4">I’m now looking for opportunities where I can apply my skills, contribute to impactful projects, and continue growing as a front-end developer. I'm excited to collaborate with teams that value clean code, accessibility, and user-centered design—while learning from real-world challenges and experiences.</p>
-        </section> 
-
-        <section id="projects" class="projects">
-            <h2>PROJECTS</h2>
-            <div class="project">
-                <img src="Assets/portfolio.jpg" alt="Portfolio Project" class="project-image">
-                <div class="project-description">
-                <h3>Portfolio</h3>
-                <p>A personal portfolio website built using HTML, CSS, JavaScript, and responsive design principles. Showcases projects, skills, and contact information in a clean, accessible layout — perfect for demonstrating front-end development abilities and creating a professional online presence.</p>
-            </div>
-            </div>
-            <div class="project">
-                <img src="Assets/todolist.png" alt="To-Do List Project" class="project-image">
-                <div class="project-description">
-                <h3>To-Do List</h3>
-                <p>A hands-on project that walks through building a fully functional To-Do List web app using modern web technologies like HTML, CSS and JavaScript. It covers essential CRUD operations, state management, and local storage for data persistence — ideal for beginners learning how to build real-world, interactive applications.</p>
-            </div>
-            </div>
+    </aside>
+    <aside class="main-sidebar">
+        <main class="main">
+            <section id="about" class="about">
+                <h2>ABOUT</h2>
+                <p class="p1">I'm a passionate front-end developer enthusiastic about building real-world web pages that are both visually engaging and user-friendly. I love working at the intersection of design and development — translating thoughtful UI designs into clean, responsive, and accessible code that performs well across devices.</p>
+                <p class="p2">As a fresher, I’ve been actively learning modern web technologies like HTML, CSS, JavaScript, and frameworks like React. I enjoy turning ideas into interactive experiences, and I'm constantly experimenting with personal projects to sharpen my skills and stay up-to-date with best practices in web development.</p>
+                <p class="p3">I’m particularly interested in creating inclusive digital experiences that are accessible to everyone, and I'm eager to grow as a developer by contributing to meaningful projects in a collaborative environment.</p>
+                <p class="p4">I’m now looking for opportunities where I can apply my skills, contribute to impactful projects, and continue growing as a front-end developer. I'm excited to collaborate with teams that value clean code, accessibility, and user-centered design—while learning from real-world challenges and experiences.</p>
+            </section> 
+            <section id="projects" class="projects">
+                <h2>PROJECTS</h2>
+                <div class="project">
+                    <img src="Assets/portfolio.jpg" alt="Portfolio Project" class="project-image">
+                    <div class="project-description">
+                        <h3>Portfolio</h3>
+                        <p>A personal portfolio website built using HTML, CSS, JavaScript, and responsive design principles. Showcases projects, skills, and contact information in a clean, accessible layout — perfect for demonstrating front-end development abilities and creating a professional online presence.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="Assets/todolist.png" alt="To-Do List Project" class="project-image">
+                    <div class="project-description">
+                        <h3>To-Do List</h3>
+                        <p>A hands-on project that walks through building a fully functional To-Do List web app using modern web technologies like HTML, CSS and JavaScript. It covers essential CRUD operations, state management, and local storage for data persistence — ideal for beginners learning how to build real-world, interactive applications.</p>
+                    </div>
+                </div>
             </section>  
-            
-        <section id="skills" class="skills">
-            <h2>SKILLS</h2>
-            <ul>
-                <li><strong>Web technologies</strong>: HTML,CSS,JS</li>
-                <li><b>Programming Languages</b>:Python,Java</li>
-                <li><b>Tools & IDEs</b>:PyCharm, Jupyter Notebook, Visual Studio Code, IntelliJ IDEA</li>
-                <li><b>Soft Skills</b>:Problem-solving, Team Collaboration, Communication</li>
-               </ul>    
-        </section>
-        
-        <section id="contact" class="contact">
-            <h2 class="contacts">CONTACT</h2>
-            <h3>Let’s Connect</h3>
-  <p >Open to freelance or full-time roles. Drop a message — I’d love to hear from you!</p>
-  <ul>
-    <li class="email"><b>Email</b>: tanmaipasupuleti1909@gmail.com</a></li>
-    <li class="linkedin"><a href="https://www.linkedin.com/in/tanmai-sai-pasupuleti-3255a228b"><b>linkedin</b></a></li>
-  </ul>
-  <p>Looking forward to hearing from you!</p>
-</section>
-    </main>
-    <!-- <footer>
-    <p>&copy; 2023 Tanmai Sai. All rights reserved.</p>
-    </footer> -->
-    <!-- <p class="media">Made with ❤️ by Tanmai Sai</p>" -->
+            <section id="skills" class="skills">
+                <h2>SKILLS</h2>
+                <ul>
+                    <li><strong>Web technologies</strong>: HTML,CSS,JS</li>
+                    <li><b>Programming Languages</b>:Python,Java</li>
+                    <li><b>Tools & IDEs</b>:PyCharm, Jupyter Notebook, Visual Studio Code, IntelliJ IDEA</li>
+                    <li><b>Soft Skills</b>:Problem-solving, Team Collaboration, Communication</li>
+                </ul>    
+            </section>
+            <section id="contact" class="contact">
+                <h2 class="contacts">CONTACT</h2>
+                <h3>Let’s Connect</h3>
+                <p>Open to freelance or full-time roles. Drop a message — I’d love to hear from you!</p>
+                <ul>
+                    <li class="email"><b>Email</b>: tanmaipasupuleti1909@gmail.com</a></li>
+                    <li class="linkedin"><a href="https://www.linkedin.com/in/tanmai-sai-pasupuleti-3255a228b"><b>linkedin</b></a></li>
+                </ul>
+                <p>Looking forward to hearing from you!</p>
+            </section>
+        </main>
     </aside>  
-    
 </body>
-
 </html>
